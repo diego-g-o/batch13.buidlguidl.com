@@ -23,7 +23,7 @@ const Profile: NextPage = () => {
               <p className="mt-1 max-w-2xl text-sm text-white">Software Developer & Web3 Engineer</p>
             </div>
             <Image
-              className="rounded-lg justify-end flex-0"
+              className="rounded-lg justify-end flex-0 w-auto max-w-none"
               src="/buidlguidl_punk.png"
               width={100}
               height={100}
