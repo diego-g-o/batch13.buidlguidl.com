@@ -20,7 +20,14 @@ const Nokcha: NextPage = () => {
   return (
     <>
       <div className="text-center mt-8 bg-secondary p-24">
-        <Image src="/blitnaut.webp" alt="Nokcha" width={216} height={216} className="mx-auto rounded-full" />
+        <Image
+          src="/blitnaut.webp"
+          alt="Nokcha"
+          width={216}
+          height={216}
+          className="mx-auto rounded-full"
+          style={{ width: "auto", height: "auto" }}
+        />
         <h1 className="text-4xl my-5">Nokcha.eth</h1>
         <p className="text-neutral mb-5 mx-auto max-w-3xl">
           I&apos;m a student about to finish my Master&apos;s degree in Information Security, and have a strong interest
