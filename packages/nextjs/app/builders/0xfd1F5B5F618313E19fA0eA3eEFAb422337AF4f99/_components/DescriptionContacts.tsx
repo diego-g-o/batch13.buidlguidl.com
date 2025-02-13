@@ -15,8 +15,8 @@ const DescriptionContacts = () => {
 
       {/* Contacts */}
       <div className="flex flex-col mt-4">
-        <ul className="menu menu-horizontal w-full">
-          <div className="flex justify-center items-center gap-2 text-lg w-full">
+        <ul className="menu w-full">
+          <div className="flex flex-wrap max-md:flex-col justify-center items-center gap-2 text-lg w-full">
             <div className="flex justify-center items-center gap-2">
               <Address address="0xfd1F5B5F618313E19fA0eA3eEFAb422337AF4f99" />
             </div>
