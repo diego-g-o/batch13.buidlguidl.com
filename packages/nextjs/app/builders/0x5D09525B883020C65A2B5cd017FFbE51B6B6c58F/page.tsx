@@ -1,4 +1,3 @@
-import type React from "react";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +23,7 @@ const XanDevProfile: NextPage = () => {
     icon: React.ReactNode;
     label: string;
   }
-  
+
   const IconLink: React.FC<IconLinkProps> = ({ href, icon, label }) => {
     return (
       <li>
