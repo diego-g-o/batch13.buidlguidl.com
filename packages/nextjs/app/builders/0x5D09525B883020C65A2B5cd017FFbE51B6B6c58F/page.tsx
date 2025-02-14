@@ -13,9 +13,14 @@ const inter = Inter({
 
 const XanDevProfile: NextPage = () => {
   const socialLinks = [
-    { href: "https://github.com/xandev3", icon: <FaGithub size={20} />, label: "GitHub" },
-    { href: "https://t.me/XanDev3", icon: <FaTelegram size={20} />, label: "Telegram: @XanDev3" },
-    { href: "mailto:xandev.eth@gmail.com", icon: <FaEnvelopeSquare size={22} />, label: "Email: xandev.eth@gmail.com" },
+    { id: "github", href: "https://github.com/xandev3", icon: <FaGithub size={20} />, label: "GitHub" },
+    { id: "telegram", href: "https://t.me/XanDev3", icon: <FaTelegram size={20} />, label: "Telegram: @XanDev3" },
+    {
+      id: "email",
+      href: "mailto:xandev.eth@gmail.com",
+      icon: <FaEnvelopeSquare size={22} />,
+      label: "Email: xandev.eth@gmail.com",
+    },
   ];
 
   interface IconLinkProps {
@@ -62,8 +67,8 @@ const XanDevProfile: NextPage = () => {
             </p>
             <h2 className="text-2xl font-semibold">Connect with Me</h2>
             <ul className="space-y-3">
-              {socialLinks.map(({ href, icon, label }) => (
-                <IconLink key={href} href={href} icon={icon} label={label} />
+              {socialLinks.map(({ id, href, icon, label }) => (
+                <IconLink key={id} href={href} icon={icon} label={label} />
               ))}
             </ul>
           </div>
