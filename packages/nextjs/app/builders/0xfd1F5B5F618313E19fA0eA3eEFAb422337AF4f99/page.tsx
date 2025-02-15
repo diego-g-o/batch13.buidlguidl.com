@@ -1,6 +1,7 @@
 import Image from "next/image";
 import About from "./_components/About";
-import DescriptionContacts from "./_components/DescriptionContacts";
+import Contacts from "./_components/Contacts";
+import Description from "./_components/Description";
 import type { NextPage } from "next";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
@@ -15,7 +16,7 @@ const Profile: NextPage = () => {
       <div className="py-7">
         <div className="flex justify-center items-start">
           {/* My photo */}
-          <div className="avatar ml-20">
+          <div className="avatar">
             <div className="w-48 rounded-xl ring ring-primary ring-offset-base-100 ring-offset-2">
               <Image
                 src="https://emerald-many-salmon-332.mypinata.cloud/ipfs/bafkreie42v4sxapftnagsrxodxvyab6mq546pvlxlucieitgruzoj7q2qe"
@@ -26,9 +27,12 @@ const Profile: NextPage = () => {
               />
             </div>
           </div>
-
-          <DescriptionContacts />
         </div>
+        <Description />
+      </div>
+
+      <div className="py-2">
+        <Contacts />
       </div>
 
       <div className="py-7">
