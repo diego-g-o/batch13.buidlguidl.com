@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Greeter from "./components/Greater";
 import SecretInfo from "./components/SecretInfo";
+import { NextPage } from "next";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
-export default function DiegoPortfolio() {
+const DiegoPortfolio: NextPage = () => {
   return (
     <div>
       <div id="Portfolio-Container" className="bg-center m-6 flex flex-col items-center">
@@ -14,7 +15,7 @@ export default function DiegoPortfolio() {
           className="pt-4 pb-0 pl-4 pr-4 w-72 h-72 flex justify-center items-center flex-shrink-0"
         >
           <Image
-            src="/diego-profile-pic.png"
+            src="/diego-profile-pic.webp"
             alt="A picture of Diego"
             width={240}
             height={240}
@@ -57,4 +58,6 @@ export default function DiegoPortfolio() {
       </div>
     </div>
   );
-}
+};
+
+export default DiegoPortfolio;

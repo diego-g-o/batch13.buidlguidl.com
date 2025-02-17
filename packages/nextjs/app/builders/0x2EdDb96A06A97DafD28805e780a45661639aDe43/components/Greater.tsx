@@ -2,14 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
-
-// Helper function to get last 4 digits of address
-const getShortAddress = (address: string) => {
-  return address.slice(-4);
-};
+import { Address } from "~~/components/scaffold-eth";
 
 export default function Greeter() {
-  const { address, isConnecting, isDisconnected } = useAccount();
+  const { address: visitorAddress, isConnecting, isDisconnected } = useAccount();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -22,7 +18,13 @@ export default function Greeter() {
 
   return (
     <div>
-      {isDisconnected || !address ? <p>Hello Anon</p> : <p>Hello connected user ...{getShortAddress(address)}</p>}
+      {isDisconnected || !visitorAddress ? (
+        <p>Hello Anon</p>
+      ) : (
+        <p className="flex items-center justify-center gap-1">
+          Hello connected user <Address address={visitorAddress} />
+        </p>
+      )}
     </div>
   );
 }
