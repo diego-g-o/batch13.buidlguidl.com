@@ -9,7 +9,7 @@ const PersonalPage: NextPage = () => {
       <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden">
         <div className="flex flex-col items-center p-6">
           <div className="w-32 h-32 relative rounded-full overflow-hidden border-4 border-blue-500">
-            <Image src="/nft.jpg" alt="Avatar" fill className="object-cover" />
+            <Image src="/nft.jpg" alt="Avatar" width={128} height={128} className="object-cover" />
           </div>
           <h1 className="mt-4 text-2xl font-bold text-gray-900 dark:text-gray-100">Arnav Kirti</h1>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 text-center">
