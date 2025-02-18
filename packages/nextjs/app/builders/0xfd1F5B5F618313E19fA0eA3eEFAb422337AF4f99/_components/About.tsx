@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const projects = [
   {
     name: "AgentMarket",
@@ -63,7 +65,9 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
           {projects.map((project, index) => (
             <div key={index} className="border border-gray-600 rounded-lg p-4 shadow-lg">
-              <img src={project.image} alt={project.name} className="w-full h-48 object-cover rounded-lg" />
+              <div className="relative w-full h-48">
+                <Image src={project.image} alt={project.name} fill className="object-cover rounded-lg" />
+              </div>
               <h3 className="text-lg text-blue-400 mt-2">{project.name}</h3>
               <p className="text-neutral text-sm">{project.description}</p>
               <a
