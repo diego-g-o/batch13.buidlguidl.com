@@ -18,15 +18,18 @@ const Home: NextPage = () => {
           <span className="block text-2xl mb-2">Welcome to</span>
           <span className="block text-4xl font-bold">Batch 13</span>
         </h1>
-        <p className="text-center text-lg">Get started by taking a look at your <Link 
-          href="https://github.com/BuidlGuidl/batch13.buidlguidl.com" 
-          passHref 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="link"
-        >
-          Batch GitHub repository.
-        </Link>
+        <p className="text-center text-lg">
+          Get started by taking a look at your{" "}
+          <Link
+            href="https://github.com/BuidlGuidl/batch13.buidlguidl.com"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            Batch GitHub Repository
+          </Link>
+          .
         </p>
         <p className="text-lg flex gap-2 justify-center">
           <span className="font-bold">Checked in builders count:</span>
