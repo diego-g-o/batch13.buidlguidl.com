@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Greeter from "./components/Greater";
+import Greeter from "./components/Greeter";
 import SecretInfo from "./components/SecretInfo";
 import { NextPage } from "next";
 import { FaGithub } from "react-icons/fa";
