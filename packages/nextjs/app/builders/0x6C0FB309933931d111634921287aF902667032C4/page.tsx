@@ -22,6 +22,7 @@ function Avatar() {
         alt="Avatar"
         width={96}
         height={96}
+        unoptimized
         className="rounded-full mb-4 sm:mb-0 sm:mr-4 border-2 border-white"
       />
       <p className="text-sm sm:text-lg font-semibold break-words max-w-full">
