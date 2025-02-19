@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { BuidlGuildLogo, ENSLogo, FarcasterLogo, GitHubLogo, OpenSeaLogo, XLogo } from "./_components/logos";
+import { BuidlGuidlLogo, ENSLogo, FarcasterLogo, GitHubLogo, OpenSeaLogo, XLogo } from "./_components/logos";
 import type { NextPage } from "next";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 export const metadata = getMetadata({
   title: "Nokcha.eth builder profile",
-  description: "BuidlGuild Batch #13 participant",
+  description: "BuidlGuidl Batch #13 participant",
 });
 
 const links = [
@@ -13,9 +13,9 @@ const links = [
   { name: "Farcaster", url: "https://warpcast.com/nokcha", Logo: FarcasterLogo },
   { name: "GitHub", url: "https://github.com/nokcha75", Logo: GitHubLogo },
   {
-    name: "BuidlGuild",
+    name: "BuidlGuidl",
     url: "https://app.buidlguidl.com/builders/0xCC634aD49a8685D5247313Fa26E961215c0bBF7F",
-    Logo: BuidlGuildLogo,
+    Logo: BuidlGuidlLogo,
   },
   { name: "OpenSea", url: "https://opensea.io/nokcha", Logo: OpenSeaLogo },
   { name: "ENS", url: "https://ens.app/nokcha.eth", Logo: ENSLogo },

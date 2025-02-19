@@ -25,7 +25,7 @@ const GitHubLogo = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const BuidlGuildLogo = (props: React.SVGProps<SVGSVGElement>) => (
+const BuidlGuidlLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg {...props} viewBox="0 0 53 72" xmlns="http://www.w3.org/2000/svg">
     <path
       fill="currentColor"
@@ -64,4 +64,4 @@ const ENSLogo = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export { XLogo, FarcasterLogo, GitHubLogo, BuidlGuildLogo, OpenSeaLogo, ENSLogo };
+export { XLogo, FarcasterLogo, GitHubLogo, BuidlGuidlLogo, OpenSeaLogo, ENSLogo };
