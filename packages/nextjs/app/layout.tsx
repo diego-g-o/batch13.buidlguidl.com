@@ -5,9 +5,9 @@ import "~~/styles/globals.css";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 export const metadata = getMetadata({
-  title: "Batch #13 - BuidlGuild 🏰🧑‍🏫",
+  title: "Batch #13 - BuidlGuidl 🏰🧑‍🏫",
   description:
-    "🚀🏰 BuidlGuild Batch 13: A passionate group of BuidlGuild builders learning and working together! Built with Scaffold ETH 2 🏰🚀",
+    "🚀🏰 BuidlGuidl Batch 13: A passionate group of BuidlGuidl builders learning and working together! Built with Scaffold ETH 2 🏰🚀",
 });
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
