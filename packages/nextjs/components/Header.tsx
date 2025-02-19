@@ -4,17 +4,12 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { BatchStatusIcon } from "./BatchStatusIcon";
 import { hardhat } from "viem/chains";
 import { useAccount } from "wagmi";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
-import {
-  useOutsideClick,
-  useScaffoldEventHistory,
-  useScaffoldReadContract,
-  useTargetNetwork,
-} from "~~/hooks/scaffold-eth";
+import { useOutsideClick, useTargetNetwork } from "~~/hooks/scaffold-eth";
 
 type HeaderMenuLink = {
   label: string;
@@ -61,40 +56,6 @@ export const HeaderMenuLinks = () => {
 };
 
 /**
- * Batch Info header icons
- */
-interface Batch13Icon {
-  className?: string; // Additional classes can be added
-}
-
-export const Batch13Icon: React.FC<Batch13Icon> = ({ className }) => {
-  return (
-    <div
-      className={`batch-13-icon flex items-center justify-center dark:text-white font-bold px-2 rounded-full shadow-lg ${className}`}
-      style={{ width: 30, height: 30, fontSize: 30 * 0.4 }}
-    >
-      13
-    </div>
-  );
-};
-
-interface CheckedInIcon {
-  className?: string; // Additional classes can be added
-  checkedIn?: boolean; // Used to display if connected address is checked into Batch 13 contract or not
-}
-
-export const CheckedInIcon: React.FC<CheckedInIcon> = ({ className, checkedIn }) => {
-  return (
-    <div
-      className={`batch-13-icon flex items-center justify-center text-black dark:text-white font-bold px-2 rounded-full shadow-lg ${checkedIn ? "dark:bg-green-800 bg-green-500" : "dark:bg-red-800 bg-red-500"}${className}`}
-      style={{ width: 30, height: 30, fontSize: 30 * 0.4 }}
-    >
-      {checkedIn ? <FaCheckCircle /> : <FaTimesCircle />}
-    </div>
-  );
-};
-
-/**
  * Site header
  */
 export const Header = () => {
@@ -108,38 +69,6 @@ export const Header = () => {
     burgerMenuRef,
     useCallback(() => setIsDrawerOpen(false), []),
   );
-
-  const { data: allowList } = useScaffoldReadContract({
-    contractName: "BatchRegistry",
-    functionName: "allowList",
-    args: [address],
-  });
-
-  const {
-    data: events,
-    isLoading: isLoadingEvents,
-    error: errorReadingEvents,
-  } = useScaffoldEventHistory({
-    contractName: "BatchRegistry",
-    eventName: "CheckedIn",
-    fromBlock: 131584792n, //optimism contract deployed after block 131584792n
-    watch: true,
-  });
-
-  function isInBatch13() {
-    return allowList;
-  }
-  function isCheckedIn() {
-    if (errorReadingEvents) {
-      console.error(errorReadingEvents);
-      return;
-    }
-    if (isLoadingEvents || !events) {
-      return false;
-    } else {
-      return events?.some(event => event.args?.builder?.toLowerCase() === address?.toLowerCase());
-    }
-  }
 
   return (
     <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
@@ -182,12 +111,7 @@ export const Header = () => {
       <div className="navbar-end flex-grow mr-4 gap-1">
         <RainbowKitCustomConnectButton />
         {isLocalNetwork && <FaucetButton />}
-        {isInBatch13() && (
-          <>
-            <Batch13Icon className={"dark:bg-green-800 bg-green-500"} />
-            <CheckedInIcon checkedIn={isCheckedIn()} />
-          </>
-        )}
+        <BatchStatusIcon userAddress={address} />
       </div>
     </div>
   );
