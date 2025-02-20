@@ -21,9 +21,10 @@ export default function Greeter() {
       {isDisconnected || !visitorAddress ? (
         <p>Hello Anon</p>
       ) : (
-        <p className="flex items-center justify-center gap-1">
-          Hello connected user <Address address={visitorAddress} />
-        </p>
+        <div className="flex items-center justify-center gap-1">
+          <p>Hello connected user:</p>
+          <Address address={visitorAddress} />
+        </div>
       )}
     </div>
   );
