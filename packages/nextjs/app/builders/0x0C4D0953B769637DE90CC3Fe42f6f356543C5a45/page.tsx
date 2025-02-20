@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { NextPage } from "next";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import { Address } from "~~/components/scaffold-eth";
 
 const NickKastenBuilderPage: NextPage = () => {
@@ -37,6 +37,14 @@ const NickKastenBuilderPage: NextPage = () => {
           className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
         >
           <FaGithub size={24} />
+        </a>
+        <a
+          href="https://t.me/kastencode"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-600 dark:text-gray-300 hover:text-blue-500"
+        >
+          <FaTelegram size={24} />
         </a>
         <a
           href="https://www.linkedin.com/in/kastencode"
