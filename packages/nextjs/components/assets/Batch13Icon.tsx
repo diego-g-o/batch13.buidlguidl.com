@@ -1,6 +1,3 @@
-/**
- * Batch Info header icons
- */
 interface Batch13Icon {
   className?: string; // Additional classes can be added
 }
