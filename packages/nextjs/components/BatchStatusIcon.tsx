@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { Tooltip } from "./Tooltip";
 import { Batch13Icon } from "./assets/Batch13Icon";
 import { CheckedInIcon } from "./assets/CheckedInIcon";
 import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
@@ -37,19 +38,25 @@ export const BatchStatusIcon = ({ userAddress }: { userAddress: string | undefin
   const statusComponents: Record<string, JSX.Element> = {
     NOT_IN_BATCH: (
       <div className="flex items-center gap-2">
-        <CheckedInIcon checkedIn={false} />
+        <Tooltip tooltip="Not in Batch 13">
+          <CheckedInIcon checkedIn={false} />
+        </Tooltip>
       </div>
     ),
 
     IN_BATCH_NOT_CHECKED_IN: (
       <div className="flex items-center gap-2">
-        <Batch13Icon className="dark:bg-yellow-600 bg-yellow-400" />
+        <Tooltip tooltip="Need to Check In">
+          <Batch13Icon className="dark:bg-yellow-600 bg-yellow-400" />
+        </Tooltip>
       </div>
     ),
 
     IN_BATCH_CHECKED_IN: (
       <div className="flex items-center gap-2">
-        <CheckedInIcon checkedIn={true} />
+        <Tooltip tooltip="Batch 13 - Checked In">
+          <CheckedInIcon checkedIn={true} />
+        </Tooltip>
       </div>
     ),
   };

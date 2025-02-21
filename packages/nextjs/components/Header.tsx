@@ -111,7 +111,7 @@ export const Header = () => {
       <div className="navbar-end flex-grow mr-4 gap-1">
         <RainbowKitCustomConnectButton />
         {isLocalNetwork && <FaucetButton />}
-        <BatchStatusIcon userAddress={address} />
+        {address && <BatchStatusIcon userAddress={address} />}
       </div>
     </div>
   );
