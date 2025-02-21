@@ -16,15 +16,15 @@ const DivyanshPage: NextPage = () => {
 
 function Avatar() {
   return (
-    <div className="flex flex-col sm:flex-row items-center text-center sm:text-left">
+    <div className="flex flex-col flex-wrap items-center text-center sm:text-left w-full">
       <Image
         src="https://i.pinimg.com/474x/d7/31/4c/d7314c015805cbf159e1099c869233ee.jpg"
         alt="Avatar"
         width={96}
         height={96}
-        className="rounded-full mb-4 sm:mb-0 sm:mr-4 border-2 border-white"
+        className="rounded-full border-2 border-white mr-4 flex-shrink-0"
       />
-      <p className="text-sm sm:text-lg font-semibold break-words max-w-full">
+      <p className="text-sm sm:text-lg font-semibold break-all sm:break-keep flex-1">
         0x6C0FB309933931d111634921287aF902667032C4
       </p>
     </div>
