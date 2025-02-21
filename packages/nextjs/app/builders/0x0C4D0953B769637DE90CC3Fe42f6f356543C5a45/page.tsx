@@ -5,7 +5,7 @@ import { Address } from "~~/components/scaffold-eth";
 
 const NickKastenBuilderPage: NextPage = () => {
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+    <div className="max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-br-lg rounded-bl-lg shadow-md">
       <div className="flex items-center mt-6 mb-6">
         <Image src="/ntk.webp" alt="Nick Kasten" width={128} height={128} className="rounded-full mr-4" />
         <h1 className="text-5xl font-bold text-gray-800 dark:text-white">Nick Kasten</h1>
