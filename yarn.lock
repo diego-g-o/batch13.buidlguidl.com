@@ -11435,11 +11435,11 @@ __metadata:
   linkType: hard
 
 "react-icons@npm:^5.4.0":
-  version: 5.5.0
-  resolution: "react-icons@npm:5.5.0"
+  version: 5.4.0
+  resolution: "react-icons@npm:5.4.0"
   peerDependencies:
     react: "*"
-  checksum: cbd74f4b7982e6e18d59798a6b578268c8eb0909d78d87bcf9b25f99b3e544fd189a76551cb5e770d17f154a60b668551aee108aaf8471309b23f7af3b2c5b07
+  checksum: 6ee5fcda49d9628e33d97e955ed6ec9f30b26226a13b14d0f3f9a698d0d5dd2e3878af7de295e0241bdd8f46af96f16bfea1fd0647beddc447c1de98bdb2178e
   languageName: node
   linkType: hard
 
