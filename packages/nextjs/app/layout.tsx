@@ -5,8 +5,9 @@ import "~~/styles/globals.css";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 export const metadata = getMetadata({
-  title: "Scaffold-ETH 2 App",
-  description: "Built with 🏗 Scaffold-ETH 2",
+  title: "Batch #13 - BuidlGuidl 🏰🧑‍🏫",
+  description:
+    "🚀🏰 BuidlGuidl Batch 13: A passionate group of BuidlGuidl builders learning and working together! Built with Scaffold ETH 2 🏰🚀",
   icons: [
     { rel: "icon", url: "/Batch13-favicon.ico" },
     { rel: "icon", type: "image/png", sizes: "32x32", url: "/Batch13-favicon-32x32.png" },
