@@ -1,0 +1,10 @@
+bash: syntax error near unexpected token `result'
+bash: syntax error near unexpected token `('
+Try: sudo apt install <deb name>
+  command 'coinst' from deb coinst (1.9.3-5)
+Command 'const' not found, did you mean:
+bash: syntax error near unexpected token `('
+console.log(result);
+const result = await contract.yourGraduationContractAddress(address);
+const address = "0x2EdDb96A06A97DafD28805e780a45661639aDe43";
+diego@diego-ASUS:~/Programacion/batch13.buidlguidl.com$  const contract = await ethers.getContractAt("BatchGraduationNFT", "0xa16E02E87b7454126E5E10d957A927A7F5B5d2be ");
